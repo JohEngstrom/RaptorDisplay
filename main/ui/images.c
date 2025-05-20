@@ -1,0 +1,24 @@
+#include "images.h"
+
+const ext_img_desc_t images[20] = {
+    { "Background", &img_background },
+    { "BatteryIconFill", &img_battery_icon_fill },
+    { "batteryIcon", &img_battery_icon },
+    { "ConnectionIconDisconnected", &img_connection_icon_disconnected },
+    { "ConnectionIconConnected", &img_connection_icon_connected },
+    { "PowerBG", &img_power_bg },
+    { "SpeedBG", &img_speed_bg },
+    { "PowerArc", &img_power_arc },
+    { "SpeedArc", &img_speed_arc },
+    { "IndicatorRight", &img_indicator_right },
+    { "IndicatorLeft", &img_indicator_left },
+    { "BlankImg", &img_blank_img },
+    { "SettingsIcon", &img_settings_icon },
+    { "LightFullIcon", &img_light_full_icon },
+    { "LightHalfIcon", &img_light_half_icon },
+    { "PadLockIcon", &img_pad_lock_icon },
+    { "ModeButtonUnlocked", &img_mode_button_unlocked },
+    { "ModeButtonCycle", &img_mode_button_cycle },
+    { "ModeButtonTractor", &img_mode_button_tractor },
+    { "ModeButtonWalk", &img_mode_button_walk },
+};

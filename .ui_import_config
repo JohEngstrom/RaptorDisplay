@@ -1,0 +1,6 @@
+[ImportSettings]
+source_dir = C:\Users\joheng\eez-projects\RaptorDash\src\ui
+destination_dir = ./backup/ui
+project_dir = ./main/ui
+user_selected_modes = all
+
