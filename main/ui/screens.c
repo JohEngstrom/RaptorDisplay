@@ -232,12 +232,20 @@ void create_screen_home_basic() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // ConnectionIconsBasic
+                                    // VescConnectedIconBasic
                                     lv_obj_t *obj = lv_img_create(parent_obj);
-                                    objects.connection_icons_basic = obj;
+                                    objects.vesc_connected_icon_basic = obj;
                                     lv_obj_set_pos(obj, -18, -20);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_img_set_src(obj, &img_connection_icon_connected);
+                                }
+                                {
+                                    // VescDisconnectedIconBasic
+                                    lv_obj_t *obj = lv_img_create(parent_obj);
+                                    objects.vesc_disconnected_icon_basic = obj;
+                                    lv_obj_set_pos(obj, -18, -20);
+                                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                                    lv_img_set_src(obj, &img_connection_icon_disconnected);
                                 }
                             }
                         }
@@ -602,17 +610,17 @@ void create_screen_home_advanced() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
-                                    // ConnectedIconAdvanced
+                                    // VescConnectedIconAdvanced
                                     lv_obj_t *obj = lv_img_create(parent_obj);
-                                    objects.connected_icon_advanced = obj;
+                                    objects.vesc_connected_icon_advanced = obj;
                                     lv_obj_set_pos(obj, -15, -17);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_img_set_src(obj, &img_connection_icon_connected);
                                 }
                                 {
-                                    // DisconnectedIconAdvanced
+                                    // VescDisconnectedIconAdvanced
                                     lv_obj_t *obj = lv_img_create(parent_obj);
-                                    objects.disconnected_icon_advanced = obj;
+                                    objects.vesc_disconnected_icon_advanced = obj;
                                     lv_obj_set_pos(obj, -15, -17);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_img_set_src(obj, &img_connection_icon_disconnected);
@@ -704,9 +712,9 @@ void create_screen_home_advanced() {
                     {
                         lv_obj_t *parent_obj = obj;
                         {
-                            // SpeedArc
+                            // SpeedArcAdvanced
                             lv_obj_t *obj = lv_arc_create(parent_obj);
-                            objects.speed_arc = obj;
+                            objects.speed_arc_advanced = obj;
                             lv_obj_set_pos(obj, -12, -12);
                             lv_obj_set_size(obj, 290, 290);
                             lv_arc_set_value(obj, 100);
@@ -756,9 +764,9 @@ void create_screen_home_advanced() {
                     {
                         lv_obj_t *parent_obj = obj;
                         {
-                            // PowerArc
+                            // PowerArcAdvanced
                             lv_obj_t *obj = lv_arc_create(parent_obj);
-                            objects.power_arc = obj;
+                            objects.power_arc_advanced = obj;
                             lv_obj_set_pos(obj, -12, -12);
                             lv_obj_set_size(obj, 290, 290);
                             lv_arc_set_value(obj, 100);

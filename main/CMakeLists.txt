@@ -1,6 +1,8 @@
 idf_component_register(
   SRCS
     "main.c"
+    "vesc_manager.c"
+    "ui_update.c"
     "waveshare_rgb_lcd_port.c"
     "lvgl_port.c"
 
@@ -37,6 +39,6 @@ idf_component_register(
     "ui/ui_image_speed_arc.c"
     "ui/ui_image_speed_bg.c"
     "ui/ui.c"
-  PRIV_REQUIRES spi_flash esp_lcd esp_lcd_touch lvgl
-  INCLUDE_DIRS "ui"
+  PRIV_REQUIRES spi_flash esp_lcd esp_lcd_touch lvgl vesc_uart
+  INCLUDE_DIRS "." "ui"
 )

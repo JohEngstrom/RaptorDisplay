@@ -1,0 +1,3 @@
+[submodule "components/vesc_uart"]
+	path = components/vesc_uart
+	url = https://github.com/JohEngstrom/VESC-UART-Library
