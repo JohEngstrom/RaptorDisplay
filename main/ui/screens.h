@@ -8,7 +8,7 @@ extern "C" {
 #endif
 
 typedef struct _objects_t {
-    lv_obj_t *lock_screen;
+    lv_obj_t *main;
     lv_obj_t *home_basic;
     lv_obj_t *home_advanced;
     lv_obj_t *settings_screen;
@@ -93,14 +93,14 @@ typedef struct _objects_t {
 extern objects_t objects;
 
 enum ScreensEnum {
-    SCREEN_ID_LOCK_SCREEN = 1,
+    SCREEN_ID_MAIN = 1,
     SCREEN_ID_HOME_BASIC = 2,
     SCREEN_ID_HOME_ADVANCED = 3,
     SCREEN_ID_SETTINGS_SCREEN = 4,
 };
 
-void create_screen_lock_screen();
-void tick_screen_lock_screen();
+void create_screen_main();
+void tick_screen_main();
 
 void create_screen_home_basic();
 void tick_screen_home_basic();

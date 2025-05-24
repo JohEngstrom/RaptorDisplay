@@ -3,6 +3,7 @@ idf_component_register(
     "main.c"
     "vesc_manager.c"
     "ui_update.c"
+    "actions.c"
     "waveshare_rgb_lcd_port.c"
     "lvgl_port.c"
 
@@ -21,6 +22,7 @@ idf_component_register(
     "ui/ui_image_background.c"
     "ui/ui_image_battery_icon_fill.c"
     "ui/ui_image_battery_icon.c"
+    "ui/ui_image_home_icon.c"
     "ui/ui_image_blank_img.c"
     "ui/ui_image_connection_icon_connected.c"
     "ui/ui_image_connection_icon_disconnected.c"

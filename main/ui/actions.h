@@ -7,7 +7,9 @@
 extern "C" {
 #endif
 
-extern void action_go_to_settings_handler(lv_event_t * e);
+extern void action_load_settings_screen_handler(lv_event_t * e);
+extern void action_load_home_advanced_screen_handler(lv_event_t * e);
+extern void action_load_home_basic_screen_handler(lv_event_t * e);
 
 
 #ifdef __cplusplus

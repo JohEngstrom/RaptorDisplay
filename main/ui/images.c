@@ -1,6 +1,6 @@
 #include "images.h"
 
-const ext_img_desc_t images[20] = {
+const ext_img_desc_t images[21] = {
     { "Background", &img_background },
     { "BatteryIconFill", &img_battery_icon_fill },
     { "batteryIcon", &img_battery_icon },
@@ -21,4 +21,5 @@ const ext_img_desc_t images[20] = {
     { "ModeButtonCycle", &img_mode_button_cycle },
     { "ModeButtonTractor", &img_mode_button_tractor },
     { "ModeButtonWalk", &img_mode_button_walk },
+    { "HomeIcon", &img_home_icon },
 };

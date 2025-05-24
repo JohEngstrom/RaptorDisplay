@@ -19,16 +19,16 @@ void update_ui_from_vesc(lv_timer_t * timer)
     lv_label_set_text(objects.battery_value_advanced, buf);
 
     // Speed
-    snprintf(buf, sizeof(buf), "%.1f", data.speed_kmh);
+    snprintf(buf, sizeof(buf), "%.0f", data.speed_kmh);
     lv_label_set_text(objects.speed_value_label_basic, buf);
     lv_label_set_text(objects.speed_value_label_advanced, buf);
 
     // Speed arc (0-100)
-    lv_arc_set_value(objects.speed_arc_basic, (int)data.speed_kmh);         // You may want to clamp to 0-100
+    lv_arc_set_value(objects.speed_arc_basic, (int)data.speed_kmh);
     lv_arc_set_value(objects.speed_arc_advanced, (int)data.speed_kmh);
 
     // Power (Watts)
-    snprintf(buf, sizeof(buf), "%.0f W", data.watts);
+    snprintf(buf, sizeof(buf), "%.0f", data.watts);
     lv_label_set_text(objects.power_value_label_advanced, buf);
 
     // Power arc (0=0W, 100=6000W)
