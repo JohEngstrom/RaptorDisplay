@@ -7,6 +7,12 @@ idf_component_register(
     "waveshare_rgb_lcd_port.c"
     "lvgl_port.c"
 
+    # Unlock files
+    "unlock/i2c_unlock.c"
+    "unlock/unlock_manager.c"
+    "unlock/unlock_callback.c"
+    "unlock/unlock_flow.c"
+
     # UI files (from your actual list)
     "ui/images.c"
     "ui/screens.c"
@@ -42,5 +48,5 @@ idf_component_register(
     "ui/ui_image_speed_bg.c"
     "ui/ui.c"
   PRIV_REQUIRES spi_flash esp_lcd esp_lcd_touch lvgl vesc_uart
-  INCLUDE_DIRS "." "ui"
+  INCLUDE_DIRS "." "ui" "unlock"
 )

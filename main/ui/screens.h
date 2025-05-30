@@ -15,10 +15,12 @@ typedef struct _objects_t {
     lv_obj_t *root_panel_lock;
     lv_obj_t *padlock_panel;
     lv_obj_t *lock_status;
-    lv_obj_t *obj0;
-    lv_obj_t *obj1;
+    lv_obj_t *lock_status_locked;
+    lv_obj_t *lock_status_unlocked;
     lv_obj_t *panel_unlock_instructions;
-    lv_obj_t *obj2;
+    lv_obj_t *obj0;
+    lv_obj_t *unlock_indicator_panel_lock;
+    lv_obj_t *unlock_indicator_lock;
     lv_obj_t *root_panel_basic;
     lv_obj_t *top_bar_panel_basic;
     lv_obj_t *battery_panel_basic;
@@ -48,6 +50,8 @@ typedef struct _objects_t {
     lv_obj_t *odo_panel_basic;
     lv_obj_t *odo_label_basic;
     lv_obj_t *odo_value_basic;
+    lv_obj_t *unlock_indicator_panel_basic;
+    lv_obj_t *unlock_indicator_basic;
     lv_obj_t *panel_template;
     lv_obj_t *root_panel_advanced;
     lv_obj_t *top_bar_panel_advanced;
