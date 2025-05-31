@@ -1,7 +1,9 @@
+#include "esp_log.h"
 #include "vesc_manager.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "vesc_uart_write.h"
+#include "unlock/unlock_manager.h"
 
 static vesc_data_t g_vesc_data = {0};
 static bool g_vesc_connected = false;
@@ -9,7 +11,10 @@ static bool g_vesc_connected = false;
 static void vesc_poll_task(void *pvParameter)
 {
     while (1) {
-        g_vesc_connected = vesc_uart_poll(&g_vesc_data);
+        // Only poll when not locked
+        if (unlock_manager_get_state() != LOCK_STATE_PARKED) {
+            g_vesc_connected = vesc_uart_poll(&g_vesc_data);
+        }
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
@@ -34,6 +39,6 @@ bool vesc_manager_get_latest_data(vesc_data_t* out)
 
 void vesc_manager_set_profile(int profile_id)
 {
-    printf("Switching VESC profile to %d\n", profile_id);
+    ESP_LOGI("VESC", "Setting profile to %d", profile_id);
     vesc_set_profile((uint8_t)profile_id);
 }

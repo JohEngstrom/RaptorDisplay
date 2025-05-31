@@ -1,3 +1,4 @@
+#include <esp_log.h>
 #include "unlock/unlock_manager.h"
 #include "unlock/i2c_unlock.h"
 #include <string.h>

@@ -2,9 +2,15 @@
 #include "vesc_manager.h"
 #include "ui/ui.h"
 #include "ui/screens.h"
+#include "unlock/unlock_manager.h"
 
 void update_ui_from_vesc(lv_timer_t * timer)
 {
+    // Only update if not on the lock screen
+    if (unlock_manager_get_state() == LOCK_STATE_PARKED) {
+        return;
+    }
+    
     vesc_data_t data;
     bool connected = vesc_manager_get_latest_data(&data);
 
